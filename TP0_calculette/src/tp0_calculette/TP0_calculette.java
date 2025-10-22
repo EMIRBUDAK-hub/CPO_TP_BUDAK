@@ -18,17 +18,18 @@ public class TP0_calculette {
     public static void main(String[] args) {
         System.out.println("Please enter the operator : \n1)add \n2)substrcat \n3)multiply \n4)divide \n5)modulo");
         
+        
+        
                 
         Scanner sc = new Scanner(System.in);
         System.out.println("Entre un nombre:" );
         int operator = sc.nextInt();
-        System.out.println("Entre un nombre:" );
+        System.out.println("Entre un nombre: " );
         int operande1 = sc.nextInt();
         
         System.out.println("Entre un nombre:" );
         int operande2 = sc.nextInt();
-     
-             
+                 
         if (operator < 1 || operator > 5) {
             System.out.println("Erreur : vous devez entrer un nombre entre 1 et 5.");
         } else { 
