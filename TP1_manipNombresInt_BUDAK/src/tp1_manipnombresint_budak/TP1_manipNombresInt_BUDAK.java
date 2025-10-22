@@ -21,6 +21,27 @@ public class TP1_manipNombresInt_BUDAK {
         int nb1 = sc.nextInt();  
         System.out.println("Entre un deuxieme nombre:" );
         int nb2= sc.nextInt();
+        
+            
+            int S=nb1+nb2;
+            System.out.println("LA SOMME EST :" + S);
+        
+            int D=nb1-nb2;
+            System.out.println("LA SOUSTRACTION EST : " + D);
+      
+            int M=nb1*nb2;
+            System.out.println("LE PRODUIT EST : " + M);
+            
+            int DIV=nb1/nb2;
+            System.out.println("LA DIVISION VAUT " + DIV);
+            
+            int reste=nb1%nb2;
+            System.out.println("LE RESTE VAUT " + reste);
+            
+            
+        
     }
+    }
+
     
-}
+
