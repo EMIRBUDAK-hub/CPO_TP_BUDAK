@@ -22,33 +22,32 @@ public class TP1_convertisseur_BUDAK {
         System.out.println("Saisissez la conversion que vous souhaiter effectuer : ");
         int nb = sc.nextInt();
         
-        if (nb==1);
+        if (nb==1){
         double tf= CelsiusVersKelvin(temp);
         System.out.println(temp + " degres Celsius est egale a " + tf + "kelvin");
         
-        if (nb==2);
+        }else if (nb==2){
         double tf1= KelvinVersCelsius(temp); 
         System.out.println(temp + "Kelvin est egal a " + tf1 + "degres Celsius");
         
-        if (nb==3);
+        }else if (nb==3){
         double tf2=FarenheitVersCelsius(temp);
-        System.out.println(temp + "farenheit est egale a " + tf + "degres Celsius");
+        System.out.println(temp + "farenheit est egale a " + tf2 + "degres Celsius");
         
-        if (nb==4);
+        } else if (nb==4){
         double tf3=CelsiusVersFarenheit(temp);
         System.out.println(temp + "degres celsius est egale a " + tf3 + "Farenheit");
         
-        if (nb==5);
+        }else if (nb==5){
         double tf4=KelvinVersFarenheit(temp);
-        System.out.print
-                
+        System.out.println(temp + "kelvin est egale a " + tf4 + "Farenheit");
+        
+        }else if (nb==6){
+        double tf5=FarenheitVersKelvin(temp);
+        System.out.println( temp + "Farenheit est egale aa " + tf5 + "Kelvin");
+}
         
         
-        
-            
-        
-        double tempK = CelsiusVersKelvin(temp);  // appel de la fonction
-        System.out.println("La temperature en Kelvin vaut : " + tempK);
         
     }
     public static double CelsiusVersKelvin(double tCelsius) {
