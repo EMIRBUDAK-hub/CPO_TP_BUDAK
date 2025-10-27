@@ -28,7 +28,7 @@ public class TP1_guessMyNumber_Budak {
 
         
 
-        if (dif == 1) {
+        if(dif==1){
             System.out.println("Bonjour, saisissez une valeur entre 0 et 100 :");
         int nb = sc.nextInt();
         cptr++; 
@@ -91,15 +91,16 @@ public class TP1_guessMyNumber_Budak {
             System.out.println("Bonjour, saisissez une valeur entre 0 et 100 :");
         int nb = sc.nextInt();
         cptr++; 
+         
             while (nb != n) {
-                int chance = generateurAleat.nextInt(100); 
+                int chance = generateurAleat.nextInt(100);
                 if (chance < 30) { 
                     if (nb < n) {
                         System.out.println("Il est grand"); 
                     } else {
                         System.out.println("Il est petit"); 
                     }
-                } else { // bonne indication
+                } else { 
                     if (nb < n) {
                         System.out.println("Il est petit");
                     } else {
