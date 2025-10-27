@@ -30,7 +30,8 @@ public class TP1_sats_BUDAK {
          
          System.out.println("Resultat ");
          for (int a=0; a<tab.length;a++){
-             System.out.println("Face " + a + " : " +tab[a]);
+              double pour=(tab[a]*100.0)/m ;
+             System.out.println("Face " + (a+1) + " : " +tab[a] +" en poucentage nous avons " + pour + "%");
          }
          
     }
