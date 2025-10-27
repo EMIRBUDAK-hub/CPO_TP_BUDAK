@@ -21,17 +21,18 @@ public class TP1_sats_BUDAK {
          Scanner sc = new Scanner(System.in);
          System.out.println("Choisit n nombre entiers");
          int m=sc.nextInt();
+         Random generateurAleat = new Random();
+         for (int i=0; i<m;i++){
+             
+          int n = generateurAleat.nextInt(6);  
+          tab[n]+=1;
+         }
          
-         for (int i=0; i<=m;i++){
-          Random generateurAleat = new Random();   
-          int n = generateurAleat.nextInt(5);  
-          if (n==i){
-            tab[i]+=1;  
-          }
+         System.out.println("Resultat ");
+         for (int a=0; a<tab.length;a++){
+             System.out.println("Face " + a + " : " +tab[a]);
          }
-         for (int a=0; a<=tab.length;a++){
-             System.out.println(tab[a]);
-         }
+         
     }
     
 }
