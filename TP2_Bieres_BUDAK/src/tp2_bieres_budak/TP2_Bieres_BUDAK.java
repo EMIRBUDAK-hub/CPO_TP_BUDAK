@@ -18,9 +18,20 @@ public class TP2_Bieres_BUDAK {
     
             uneBiere.lireEtiquette();
     BouteilleBiere deuxBiere=new BouteilleBiere("Leffe",6.6,"Abbaye de Leffe");
-    
+    System.out.println(uneBiere) ;
+
             deuxBiere.lireEtiquette();
             
+    boolean retour =uneBiere.Decapsuler();
+    if(retour==false){
+        System.out.println("Il y a un PB");
+        
+    }else{
+        System.out.println(uneBiere);
+    }
+    
+    
+    
     }
     
 }
