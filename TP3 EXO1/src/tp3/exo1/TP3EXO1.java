@@ -13,8 +13,29 @@ public class TP3EXO1 {
     /**
      * @param args the command line arguments
      */
+   
+      
     public static void main(String[] args) {
-        
+
+        Epee excalibur = new Epee("Excalibur", 7, 5);
+        Baton chene = new Baton("Chêne", 4, 5);
+
+        Guerrier conan = new Guerrier("Conan", 80, true);
+        Magicien gandalf = new Magicien("Gandalf", 60, false);
+
+        conan.ajouterArme(excalibur);
+        conan.equiper("Excalibur");
+
+        gandalf.ajouterArme(chene);
+        gandalf.equiper("Chêne");
+
+        conan.attaquer(gandalf);
+        gandalf.attaquer(conan);
+
+        System.out.println(conan);
+        System.out.println(gandalf);
     }
-    
 }
+
+    
+    
