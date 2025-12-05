@@ -51,6 +51,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel2_afficherbon = new javax.swing.JLabel();
         jLabel3_afficherhauts = new javax.swing.JLabel();
         jLabel4_afficherbas = new javax.swing.JLabel();
+        jLabel2_nbrdetentatives = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -115,7 +116,7 @@ public class Interface extends javax.swing.JFrame {
 
                         jLabel10_score.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
                         jLabel10_score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                        jLabel10_score.setText("0/5");
+                        jLabel10_score.setText("/5");
 
                         jButton1_recommencer.setText("RECOMMENCER");
                         jButton1_recommencer.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +130,10 @@ public class Interface extends javax.swing.JFrame {
                         jLabel3_afficherhauts.setText("0");
 
                         jLabel4_afficherbas.setText("0");
+
+                        jLabel2_nbrdetentatives.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+                        jLabel2_nbrdetentatives.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                        jLabel2_nbrdetentatives.setText("0");
 
                         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                         getContentPane().setLayout(layout);
@@ -181,16 +186,20 @@ public class Interface extends javax.swing.JFrame {
                                                     .addComponent(jLabel3_afficherhauts, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addContainerGap()
-                                                .addComponent(jButton1_recommencer, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
                                                 .addComponent(jLabel7_exact, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel2_afficherbon, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(jLabel2_afficherbon, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addComponent(jButton1_recommencer, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel10_score, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                            .addComponent(jLabel6_tentatives, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(14, 14, 14)
+                                                .addComponent(jLabel2_nbrdetentatives, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel10_score, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel6_tentatives, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(23, 23, 23))
                         );
                         layout.setVerticalGroup(
@@ -232,15 +241,17 @@ public class Interface extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel9_bas)
                                             .addComponent(jLabel4_afficherbas))
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1_recommencer)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel6_tentatives)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel10_score, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jButton1_recommencer))))
-                                .addContainerGap())
+                                            .addComponent(jLabel10_score)
+                                            .addComponent(jLabel2_nbrdetentatives, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addContainerGap())))
                         );
 
                         pack();
@@ -295,6 +306,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1_Texte_intro;
     private javax.swing.JLabel jLabel2_afficherbon;
     private javax.swing.JLabel jLabel2_case1;
+    private javax.swing.JLabel jLabel2_nbrdetentatives;
     private javax.swing.JLabel jLabel3_afficherhauts;
     private javax.swing.JLabel jLabel3_case2;
     private javax.swing.JLabel jLabel4_afficherbas;
