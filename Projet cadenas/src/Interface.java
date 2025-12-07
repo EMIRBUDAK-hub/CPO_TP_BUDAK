@@ -60,6 +60,11 @@ public class Interface extends javax.swing.JFrame {
         jLabel1_Texte_intro.setText("Trouver le bon code en moins de 5 tentatives");
 
         jButton1_upcase1.setText("/\\");
+            jButton1_upcase1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jButton1_upcase1ActionPerformed(evt);
+                }
+            });
 
             jButton2_upcase2.setText("/\\");
 
@@ -264,6 +269,10 @@ public class Interface extends javax.swing.JFrame {
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1_recommencerActionPerformed
+
+    private void jButton1_upcase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_upcase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1_upcase1ActionPerformed
 
     /**
      * @param args the command line arguments
