@@ -15,8 +15,10 @@ public class Interface extends javax.swing.JFrame {
      * Creates new form Interface
      */
     public Interface() {
-        initComponents();
+         initComponents();
     }
+   
+       
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -263,7 +265,10 @@ public class Interface extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_TESTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TESTERActionPerformed
-        // TODO add your handling code here:
+        Partie_Recherche  combi1= new Partie_Recherche (5 , 4 );
+        for (int i =0; i< 4 ; i++){
+         System.out.println(combi1.combicacher[i]);
+        }
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
