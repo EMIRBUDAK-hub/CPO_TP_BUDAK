@@ -197,36 +197,57 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2_upcase2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton3_upcase3">
       <Properties>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3_upcase3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4_upcase4">
       <Properties>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4_upcase4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton5_downcase1">
       <Properties>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5_downcase1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton6_downcase2">
       <Properties>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6_downcase2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton7_downcase3">
       <Properties>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7_downcase3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton8_downcase4">
       <Properties>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8_downcase4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2_case1">
       <Properties>

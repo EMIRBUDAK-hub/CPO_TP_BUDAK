@@ -17,6 +17,8 @@ private int nbtentatives ;
 private int limites;
 private boolean gagner ; 
 private int[] combi;
+
+
 int [] combicacher= new int [4];
 
     public int[] getCombi() {
@@ -42,14 +44,15 @@ int [] combicacher= new int [4];
     public Partie_Recherche(int nbChiffres, int limites) {
         this.nbChiffres = nbChiffres;
         this.limites = limites;
-        //reset();
+        
         cacher(); 
         
     }
 
-    private void reset( int limites, int combi ){
+    private void reset(){
         
-        for (int i=0; i<10;i++ ){
+        for (int i=0; i<combi.length;i++ ){
+            this.combi[i]= 0;
             
         
     }

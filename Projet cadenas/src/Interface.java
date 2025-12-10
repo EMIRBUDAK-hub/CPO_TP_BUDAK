@@ -18,7 +18,10 @@ public class Interface extends javax.swing.JFrame {
          initComponents();
     }
    
-       
+     // (Partie_Recherche  combi1= new Partie_Recherche (5 , 4 );
+       // for (int i =0; i< 4 ; i++){
+         //System.out.println(combi1.combicacher[i]);
+        //} 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -69,18 +72,53 @@ public class Interface extends javax.swing.JFrame {
             });
 
             jButton2_upcase2.setText("/\\");
+                jButton2_upcase2.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        jButton2_upcase2ActionPerformed(evt);
+                    }
+                });
 
                 jButton3_upcase3.setText("/\\");
+                    jButton3_upcase3.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                            jButton3_upcase3ActionPerformed(evt);
+                        }
+                    });
 
                     jButton4_upcase4.setText("/\\");
+                        jButton4_upcase4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton4_upcase4ActionPerformed(evt);
+                            }
+                        });
 
                         jButton5_downcase1.setText("\\/");
+                        jButton5_downcase1.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton5_downcase1ActionPerformed(evt);
+                            }
+                        });
 
                         jButton6_downcase2.setText("\\/");
+                        jButton6_downcase2.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton6_downcase2ActionPerformed(evt);
+                            }
+                        });
 
                         jButton7_downcase3.setText("\\/");
+                        jButton7_downcase3.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton7_downcase3ActionPerformed(evt);
+                            }
+                        });
 
                         jButton8_downcase4.setText("\\/");
+                        jButton8_downcase4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton8_downcase4ActionPerformed(evt);
+                            }
+                        });
 
                         jLabel2_case1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
                         jLabel2_case1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -265,19 +303,71 @@ public class Interface extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_TESTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TESTERActionPerformed
-        Partie_Recherche  combi1= new Partie_Recherche (5 , 4 );
-        for (int i =0; i< 4 ; i++){
-         System.out.println(combi1.combicacher[i]);
+        if (jLabel2_case1==combicacher[1]){
+  
         }
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
-        // TODO add your handling code here:
+      jLabel2_case1.setText("0");
+      jLabel3_case2.setText("0");
+      jLabel4_case3.setText("0");
+      jLabel5_case4.setText("0");
+      jLabel2_afficherbon.setText("0");
+      jLabel3_afficherhauts.setText("0");
+      jLabel4_afficherbas.setText("0");
+      jLabel2_nbrdetentatives.setText("0");
+      
+      
+      
     }//GEN-LAST:event_jButton1_recommencerActionPerformed
 
     private void jButton1_upcase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_upcase1ActionPerformed
-        // TODO add your handling code here:
+        int valeur =Integer.parseInt(jLabel2_case1.getText());
+        valeur = (valeur + 1)%10;
+        jLabel2_case1.setText(String.valueOf(valeur));
     }//GEN-LAST:event_jButton1_upcase1ActionPerformed
+
+    private void jButton2_upcase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_upcase2ActionPerformed
+      int valeur =Integer.parseInt(jLabel3_case2.getText());
+        valeur = (valeur + 1)%10;
+        jLabel3_case2.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton2_upcase2ActionPerformed
+
+    private void jButton3_upcase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_upcase3ActionPerformed
+int valeur =Integer.parseInt(jLabel4_case3.getText());
+        valeur = (valeur + 1)%10;
+        jLabel4_case3.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton3_upcase3ActionPerformed
+
+    private void jButton4_upcase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_upcase4ActionPerformed
+int valeur =Integer.parseInt(jLabel5_case4.getText());
+        valeur = (valeur + 1)%10;
+        jLabel5_case4.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton4_upcase4ActionPerformed
+
+    private void jButton5_downcase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_downcase1ActionPerformed
+      int valeur =Integer.parseInt(jLabel2_case1.getText());
+        valeur = (valeur - 1 + 10)%10;
+        jLabel2_case1.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton5_downcase1ActionPerformed
+
+    private void jButton6_downcase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_downcase2ActionPerformed
+int valeur =Integer.parseInt(jLabel3_case2.getText());
+        valeur = (valeur - 1 + 10)%10;
+        jLabel3_case2.setText(String.valueOf(valeur));    }//GEN-LAST:event_jButton6_downcase2ActionPerformed
+
+    private void jButton7_downcase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7_downcase3ActionPerformed
+int valeur =Integer.parseInt(jLabel4_case3.getText());
+        valeur = (valeur - 1 + 10)%10;
+        jLabel4_case3.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton7_downcase3ActionPerformed
+
+    private void jButton8_downcase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8_downcase4ActionPerformed
+    int valeur =Integer.parseInt(jLabel5_case4.getText());
+        valeur = (valeur - 1 + 10)%10;
+        jLabel5_case4.setText(String.valueOf(valeur));
+    }//GEN-LAST:event_jButton8_downcase4ActionPerformed
 
     /**
      * @param args the command line arguments
