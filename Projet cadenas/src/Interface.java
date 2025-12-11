@@ -8,9 +8,11 @@
  * @author emirb
  */
 public class Interface extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
+    Partie_Recherche jeu = Partie_Recherche ();
+int[] tentative = {0, 0, 0, 0}; // case1 – case2 – case3 – case4
+int nbTentatives = 0;
 
+    
     /**
      * Creates new form Interface
      */
@@ -303,9 +305,9 @@ public class Interface extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_TESTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TESTERActionPerformed
-        if (jLabel2_case1==combicacher[1]){
-  
-        }
+       
+
+    
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed

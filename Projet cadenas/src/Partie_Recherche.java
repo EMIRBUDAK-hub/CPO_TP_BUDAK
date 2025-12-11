@@ -1,5 +1,7 @@
-
+import java.util.ArrayList;
+import java.util.List;
 import static java.lang.Math.random;
+import java.util.Random;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,59 +13,92 @@ import static java.lang.Math.random;
  * @author emirb
  */
 public class Partie_Recherche extends javax.swing.JFrame {
-    
-private int nbChiffres ;
-private int nbtentatives ;
-private int limites;
-private boolean gagner ; 
-private int[] combi;
+ 
+    private int[] combinaison;              // Combinaison secrète de 4 chiffres
+    private List<int[]> historiqueEssais;   // Liste des tentatives effectuées
+    private List<ResultatEssai> historiqueResultats; // Résultats associés
 
+    public static final int TAILLE = 4;
 
-int [] combicacher= new int [4];
-
-    public int[] getCombi() {
-        return combi;
+    public Partie_Recherche () {
+        historiqueEssais = new ArrayList<>();
+        historiqueResultats = new ArrayList<>();
+        nouvellePartie();
     }
 
-    public int[] getCombicacher() {
-        
-        return combicacher;
-    }
+    /**
+     * Génère une nouvelle combinaison secrète et efface l'historique.
+     */
+    public void nouvellePartie() {
+        combinaison = new int[TAILLE];
+        Random r = new Random();
 
-    public void setCombi(int[] combi) {
-        this.combi = combi;
-    }
-
-    public void setCombicacher(int[] combicacher) {
-        this.combicacher = combicacher;
-    }
-    
-
-
-
-    public Partie_Recherche(int nbChiffres, int limites) {
-        this.nbChiffres = nbChiffres;
-        this.limites = limites;
-        
-        cacher(); 
-        
-    }
-
-    private void reset(){
-        
-        for (int i=0; i<combi.length;i++ ){
-            this.combi[i]= 0;
-            
-        
-    }
-      
-    }
-
-    private void cacher (){
-        for (int i=0; i<combicacher.length; i++){
-            this. combicacher[i]=(int) (Math.random()*10); 
+        for (int i = 0; i < TAILLE; i++) {
+            combinaison[i] = r.nextInt(10); // chiffre entre 0 et 9
         }
+
+        historiqueEssais.clear();
+        historiqueResultats.clear();
     }
-  
+
+    /**
+     * Vérifie une tentative passée par l'interface et renvoie un objet résultat.
+     */
+    public ResultatEssai verifierTentative(int[] tentative) {
+        if (tentative.length != TAILLE)
+            throw new IllegalArgumentException("La combinaison doit faire 4 chiffres.");
+
+        int nbExact = 0;
+        int nbTropHaut = 0;
+        int nbTropBas = 0;
+
+        for (int i = 0; i < TAILLE; i++) {
+            if (tentative[i] == combinaison[i]) {
+                nbExact++;
+            } else if (tentative[i] > combinaison[i]) {
+                nbTropHaut++;
+            } else {
+                nbTropBas++;
+            }
+        }
+
+        ResultatEssai res = new ResultatEssai(nbExact, nbTropHaut, nbTropBas);
+
+        // on mémorise l'essai
+        historiqueEssais.add(tentative.clone());
+        historiqueResultats.add(res);
+
+        return res;
+    }
+
+    /**
+     * Permet à la GUI d'afficher la combinaison (ex : pour écran de fin).
+     */
+    public int[] getCombinaison() {
+        return combinaison.clone();
+    }
+
+    public List<int[]> getHistoriqueEssais() {
+        return historiqueEssais;
+    }
+
+    public List<ResultatEssai> getHistoriqueResultats() {
+        return historiqueResultats;
+    }
+
+    /**
+     * Classe interne servant à stocker un résultat d'essai.
+     */
+    public static class ResultatEssai {
+        public int nbExact;
+        public int nbTropHaut;
+        public int nbTropBas;
+
+        public ResultatEssai(int exact, int haut, int bas) {
+            this.nbExact = exact;
+            this.nbTropHaut = haut;
+            this.nbTropBas = bas;
+        }
+    }  
 }
 
