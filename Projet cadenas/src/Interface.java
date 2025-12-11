@@ -11,6 +11,12 @@ public class Interface extends javax.swing.JFrame {
 Partie_Recherche jeu = new Partie_Recherche();
 int[] tentative = {0, 0, 0, 0}; // case1 – case2 – case3 – case4
 int nbTentatives = 0;
+
+int nbTentative = 0;
+final int MAX_TENTATIVES = 5;   // nombre d’essais autorisés
+
+
+
 public Interface() {
     initComponents();
 }
@@ -310,7 +316,39 @@ public Interface() {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_TESTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TESTERActionPerformed
- 
+
+   // Si on dépasse la limite → on désactive + on stoppe
+    if (nbTentatives >= MAX_TENTATIVES) {
+        jButton_TESTER.setEnabled(false);
+        return;
+    }
+
+    // Incrémenter le compteur
+    nbTentatives++;
+    jLabel2_nbrdetentatives.setText("" + nbTentatives);
+
+    // Vérifier si on vient d'atteindre la limite pile (6ᵉ essai)
+    if (nbTentatives == MAX_TENTATIVES) {
+        // On laisse faire le test normal
+        // mais ensuite on désactive le bouton
+        // → le joueur ne peut plus cliquer une 7ᵉ fois
+        // Note : le test suit juste après ce bloc
+    }
+
+    // Vérification avec la classe métier
+    Partie_Recherche.ResultatEssai res = jeu.verifierTentative(tentative);
+
+    jLabel2_afficherbon.setText("" + res.nbExact);
+    jLabel3_afficherhauts.setText("" + res.nbTropHaut);
+    jLabel4_afficherbas.setText("" + res.nbTropBas);
+
+    // Si le joueur a trouvé : message
+    
+
+    // Si on a atteint exactement le 6ᵉ essai → désactivation
+    if (nbTentatives == MAX_TENTATIVES) {
+        jButton_TESTER.setEnabled(false);
+    }
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
