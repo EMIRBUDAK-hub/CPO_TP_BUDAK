@@ -352,8 +352,21 @@ public Interface() {
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
-                                                   
-  
+       jeu.nouvellePartie();
+    nbTentatives = 0;
+    jLabel2_nbrdetentatives.setText("0");
+
+    for (int i = 0; i < 4; i++) tentative[i] = 0;
+
+    jLabel2_case1.setText("0");
+    jLabel3_case2.setText("0");
+    jLabel4_case3.setText("0");
+    jLabel5_case4.setText("0");
+
+    jLabel2_afficherbon.setText("0");
+    jLabel3_afficherhauts.setText("0");
+    jLabel4_afficherbas.setText("0");                                            
+   jButton_TESTER.setEnabled(true);
       
     }//GEN-LAST:event_jButton1_recommencerActionPerformed
 
