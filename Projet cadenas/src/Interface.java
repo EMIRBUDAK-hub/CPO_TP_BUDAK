@@ -8,22 +8,19 @@
  * @author emirb
  */
 public class Interface extends javax.swing.JFrame {
-    Partie_Recherche jeu = Partie_Recherche ();
+Partie_Recherche jeu = new Partie_Recherche();
 int[] tentative = {0, 0, 0, 0}; // case1 – case2 – case3 – case4
 int nbTentatives = 0;
-
+public Interface() {
+    initComponents();
+}
     
     /**
      * Creates new form Interface
      */
-    public Interface() {
-         initComponents();
-    }
+  
    
-     // (Partie_Recherche  combi1= new Partie_Recherche (5 , 4 );
-       // for (int i =0; i< 4 ; i++){
-         //System.out.println(combi1.combicacher[i]);
-        //} 
+     
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,7 +38,6 @@ int nbTentatives = 0;
         jButton3_upcase3 = new javax.swing.JButton();
         jButton4_upcase4 = new javax.swing.JButton();
         jButton5_downcase1 = new javax.swing.JButton();
-        jButton6_downcase2 = new javax.swing.JButton();
         jButton7_downcase3 = new javax.swing.JButton();
         jButton8_downcase4 = new javax.swing.JButton();
         jLabel2_case1 = new javax.swing.JLabel();
@@ -59,6 +55,7 @@ int nbTentatives = 0;
         jLabel3_afficherhauts = new javax.swing.JLabel();
         jLabel4_afficherbas = new javax.swing.JLabel();
         jLabel2_nbrdetentatives = new javax.swing.JLabel();
+        jButton6_downcase2 = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -98,13 +95,6 @@ int nbTentatives = 0;
                         jButton5_downcase1.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 jButton5_downcase1ActionPerformed(evt);
-                            }
-                        });
-
-                        jButton6_downcase2.setText("\\/");
-                        jButton6_downcase2.addActionListener(new java.awt.event.ActionListener() {
-                            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                jButton6_downcase2ActionPerformed(evt);
                             }
                         });
 
@@ -182,44 +172,19 @@ int nbTentatives = 0;
                         jLabel2_nbrdetentatives.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                         jLabel2_nbrdetentatives.setText("0");
 
+                        jButton6_downcase2.setText("\\/");
+                        jButton6_downcase2.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jButton6_downcase2ActionPerformed(evt);
+                            }
+                        });
+
                         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                         getContentPane().setLayout(layout);
                         layout.setHorizontalGroup(
                             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addContainerGap(14, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel1_Texte_intro, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel2_case1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jButton5_downcase1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jButton6_downcase2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jButton7_downcase3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jButton8_downcase4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(6, 6, 6)
-                                                        .addComponent(jLabel3_case2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jButton1_upcase1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton2_upcase2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jLabel4_case3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jButton3_upcase3, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jButton4_upcase4, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                                                    .addComponent(jLabel5_case4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                            .addComponent(jButton_TESTER, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
@@ -246,37 +211,77 @@ int nbTentatives = 0;
                                                 .addComponent(jLabel2_nbrdetentatives, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel10_score, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel6_tentatives, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(jLabel6_tentatives, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jButton1_upcase1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel2_case1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jButton5_downcase1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jButton_TESTER, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jButton6_downcase2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addComponent(jButton7_downcase3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addComponent(jButton2_upcase2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                    .addComponent(jButton3_upcase3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGroup(layout.createSequentialGroup()
+                                                                    .addComponent(jLabel3_case2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                    .addComponent(jLabel4_case3, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jButton4_upcase4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(jButton8_downcase4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(jLabel5_case4, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addGap(36, 36, 36))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel1_Texte_intro, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(45, 45, 45)))))
                                 .addGap(23, 23, 23))
                         );
                         layout.setVerticalGroup(
                             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
+                                .addGap(22, 22, 22)
                                 .addComponent(jLabel1_Texte_intro)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton1_upcase1)
-                                    .addComponent(jButton2_upcase2)
-                                    .addComponent(jButton3_upcase3)
-                                    .addComponent(jButton4_upcase4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2_case1, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                                    .addComponent(jLabel3_case2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4_case3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5_case4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton5_downcase1)
-                                    .addComponent(jButton6_downcase2)
-                                    .addComponent(jButton7_downcase3)
-                                    .addComponent(jButton8_downcase4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_TESTER)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(113, 113, 113)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jButton7_downcase3)
+                                            .addComponent(jButton8_downcase4))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton_TESTER))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jButton1_upcase1)
+                                            .addComponent(jButton2_upcase2)
+                                            .addComponent(jButton3_upcase3)
+                                            .addComponent(jButton4_upcase4))
+                                        .addGap(14, 14, 14)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jLabel2_case1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel3_case2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel4_case3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel5_case4, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jButton5_downcase1)
+                                            .addComponent(jButton6_downcase2))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel7_exact)
                                             .addComponent(jLabel2_afficherbon))
@@ -305,71 +310,54 @@ int nbTentatives = 0;
                     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_TESTERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_TESTERActionPerformed
-       
-
-    
+ 
     }//GEN-LAST:event_jButton_TESTERActionPerformed
 
     private void jButton1_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_recommencerActionPerformed
-      jLabel2_case1.setText("0");
-      jLabel3_case2.setText("0");
-      jLabel4_case3.setText("0");
-      jLabel5_case4.setText("0");
-      jLabel2_afficherbon.setText("0");
-      jLabel3_afficherhauts.setText("0");
-      jLabel4_afficherbas.setText("0");
-      jLabel2_nbrdetentatives.setText("0");
-      
-      
+                                                   
+  
       
     }//GEN-LAST:event_jButton1_recommencerActionPerformed
 
     private void jButton1_upcase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_upcase1ActionPerformed
-        int valeur =Integer.parseInt(jLabel2_case1.getText());
-        valeur = (valeur + 1)%10;
-        jLabel2_case1.setText(String.valueOf(valeur));
+       tentative[0] = (tentative[0] + 1) % 10;
+    jLabel2_case1.setText("" + tentative[0]);
     }//GEN-LAST:event_jButton1_upcase1ActionPerformed
 
     private void jButton2_upcase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_upcase2ActionPerformed
-      int valeur =Integer.parseInt(jLabel3_case2.getText());
-        valeur = (valeur + 1)%10;
-        jLabel3_case2.setText(String.valueOf(valeur));
+     tentative[1] = (tentative[1] + 1) % 10;
+    jLabel3_case2.setText("" + tentative[1]);
     }//GEN-LAST:event_jButton2_upcase2ActionPerformed
 
     private void jButton3_upcase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_upcase3ActionPerformed
-int valeur =Integer.parseInt(jLabel4_case3.getText());
-        valeur = (valeur + 1)%10;
-        jLabel4_case3.setText(String.valueOf(valeur));
+    tentative[2] = (tentative[2] + 1) % 10;
+    jLabel4_case3.setText("" + tentative[2]);
     }//GEN-LAST:event_jButton3_upcase3ActionPerformed
 
     private void jButton4_upcase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_upcase4ActionPerformed
-int valeur =Integer.parseInt(jLabel5_case4.getText());
-        valeur = (valeur + 1)%10;
-        jLabel5_case4.setText(String.valueOf(valeur));
+    tentative[3] = (tentative[3] + 1) % 10;
+    jLabel5_case4.setText("" + tentative[3]);
     }//GEN-LAST:event_jButton4_upcase4ActionPerformed
 
     private void jButton5_downcase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_downcase1ActionPerformed
-      int valeur =Integer.parseInt(jLabel2_case1.getText());
-        valeur = (valeur - 1 + 10)%10;
-        jLabel2_case1.setText(String.valueOf(valeur));
+       tentative[0] = (tentative[0] + 9) % 10;
+    jLabel2_case1.setText("" + tentative[0]);
     }//GEN-LAST:event_jButton5_downcase1ActionPerformed
 
-    private void jButton6_downcase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_downcase2ActionPerformed
-int valeur =Integer.parseInt(jLabel3_case2.getText());
-        valeur = (valeur - 1 + 10)%10;
-        jLabel3_case2.setText(String.valueOf(valeur));    }//GEN-LAST:event_jButton6_downcase2ActionPerformed
-
     private void jButton7_downcase3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7_downcase3ActionPerformed
-int valeur =Integer.parseInt(jLabel4_case3.getText());
-        valeur = (valeur - 1 + 10)%10;
-        jLabel4_case3.setText(String.valueOf(valeur));
+    tentative[2] = (tentative[2] + 9) % 10;
+    jLabel4_case3.setText("" + tentative[2]);
     }//GEN-LAST:event_jButton7_downcase3ActionPerformed
 
     private void jButton8_downcase4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8_downcase4ActionPerformed
-    int valeur =Integer.parseInt(jLabel5_case4.getText());
-        valeur = (valeur - 1 + 10)%10;
-        jLabel5_case4.setText(String.valueOf(valeur));
+     tentative[3] = (tentative[3] + 9) % 10;
+    jLabel5_case4.setText("" + tentative[3]);
     }//GEN-LAST:event_jButton8_downcase4ActionPerformed
+
+    private void jButton6_downcase2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_downcase2ActionPerformed
+    tentative[1] = (tentative[1] + 9) % 10;
+    jLabel3_case2.setText("" + tentative[1]);
+    }//GEN-LAST:event_jButton6_downcase2ActionPerformed
 
     /**
      * @param args the command line arguments
